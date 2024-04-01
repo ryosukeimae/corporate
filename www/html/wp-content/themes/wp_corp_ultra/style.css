@@ -1,0 +1,676 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*
+Theme Name: corp ultra 1.0
+Author: ULTRA Inc. Fuyu Nagao
+Author URI: https://corp.ultra-pay.co.jp/
+Description: 株式会社ULTRAのホームページ用テーマ
+Version: 1.0
+*/
+
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+html{
+	font-size: 100%;/*TIS規定により*/
+}
+body{
+	color:#333333;
+	font-family: "Noto Sans CJK JP", sans-serif;
+	font-size: 0.75rem;
+	-webkit-font-smoothing:antiliased;
+	-moz-osx-font-smoothing:grayscale;
+	font-feature-settings: "palt";/*自動でカーニング*/
+	letter-spacing: 0.2em;
+	line-height: 2.1;
+}
+img{
+	max-width:100%;
+	height: auto;
+}
+a{
+	color: #333333;
+	text-decoration: none;
+}
+.text_center{
+	text-align: center;
+}
+.text_green{
+  color: #3dccb7;
+}
+.text_white{
+  color: #fff;
+}
+.pc{
+	display: none;
+}
+.bg_gray{
+  background-color: #F5F5F5;
+}
+.bg_white{
+  background-color: #fff;
+}
+.inner{
+  margin: 0 auto;
+  padding-right: 6%;
+  padding-left: 6%;
+}
+.home_h2_title{
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.3;
+  padding-bottom: 48px;
+  padding-top: 70px;/*ページ内リンク位置合せ用*/
+  margin-top: -70px;/*ページ内リンク位置合せ用*/
+}
+
+
+/*---*header-----*/
+.header{
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+  top: 0;
+  background-color: #fff;
+}
+.header_title{
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+}
+.header_logo img{
+  display: inline-block;
+  height: 27px;
+  margin-top: 17px;
+  margin-left: 23px;
+}
+/*Menuボタン*/
+.menu_trigger,
+.menu_trigger span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+  z-index: 501;
+}
+.menu_trigger {
+  position: relative;
+  width: 20px;
+  height: 16px;
+  margin-top: 25px;
+  margin-right: 23px;
+}
+.menu_trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #203e38;
+  border-radius: 4px;
+}
+.menu_trigger span:nth-of-type(1) {
+  top: 0;
+}
+.menu_trigger span:nth-of-type(2) {
+  top: 7px;
+}
+.menu_trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+.menu_trigger.active span:nth-of-type(1) {
+  -webkit-transform: translateY(7px) rotate(-45deg);
+  transform: translateY(7px) rotate(-45deg);
+}
+.menu_trigger.active span:nth-of-type(2) {
+  left: 50%;
+  opacity: 0;
+  -webkit-animation: active-menu-bar02 .8s forwards;
+  animation: active-menu-bar02 .8s forwards;
+}
+@-webkit-keyframes active-menu-bar02 {
+  100% {
+    height: 0;
+  }
+}
+@keyframes active-menu-bar02 {
+  100% {
+    height: 0;
+  }
+}
+.menu_trigger.active span:nth-of-type(3) {
+  -webkit-transform: translateY(-7px) rotate(45deg);
+  transform: translateY(-7px) rotate(45deg);
+}
+/*Menuコンテンツ*/
+.header_nav{
+  position: absolute;
+  font-weight: 700;
+  text-align: center;
+  top: -65px;
+  display: none;
+  right: 0%;
+  width: 100%;
+  background-color: #F5F5F5;
+  opacity: 0.99;
+  padding-top: 200px;
+  padding-bottom: 300px;
+}
+.header_nav_list{
+  margin-bottom: 45px;
+}
+.header_nav_list li a{
+  display: block;
+  padding-bottom: 3px;  
+  margin-bottom: 16px;
+  font-size: 1.125rem;
+}
+.header_line{
+  height: 1px;
+  background-color: rgba(51,51,51,0.12);
+  margin-right: 6%;
+  margin-left: 6%;  
+}
+.header_intec_link{
+  padding-top: 40px;
+/*  border-top: solid 1px rgba(51,51,51,0.12);*/
+}
+.header_intec_link a{
+  font-size: 0.8rem;
+  color: #707070;
+}
+
+/*---Main Visual-----*/
+.main_visual{
+  margin-top: 60px;
+  background: url("img/main_visual_sp.png") no-repeat center center;
+  background-size: cover;
+  background-position: bottom;
+  height: 425px;
+  /*文字を中央に*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_visual_title{
+  width: 70vw;
+}
+
+/*---Home 各Section-----*/
+.sec_service{
+  margin: 80px 6% 0;
+  padding-top: 55px;
+  padding-bottom: 40px;
+}
+.sec_service h2{
+  margin-bottom: 40px;
+}
+.sec_service .ultra_logo{
+  display: block;
+  width: 150px;
+  height: 45px;
+  margin: 0 auto;
+}
+.sec_service .caption{
+  margin-bottom: 24px;
+}
+.btn_1{
+  display: block;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.875rem;
+  background-color: #20D0B8;
+  border-radius: 8px;
+  width: 260px;
+  height: 52px;
+  text-align: center;
+  margin: 0 auto 38px;
+  line-height: 50px;
+  box-shadow: 0 13px 36px #D3D3D3;
+}
+.btn_1:hover{
+  opacity: 0.5;
+  transform: scale(0.95);
+}
+.sec_message{
+  margin-top: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.sec_company{
+  padding-top: 80px;
+  padding-bottom: 160px;
+}
+.company_contents{
+  text-align: left;
+}
+.company_contents th{
+  padding-right: 30px;
+  padding-top: 14px;
+  line-height: 1.6;
+  width: 117px;
+}
+.company_contents td{
+  line-height: 1.6;  
+}
+
+/*---Footer-----*/
+footer{
+  letter-spacing: normal;
+}
+.footer_wrap_a{
+  padding: 86px 6%;
+  background-color: #F5F5F5;
+  color: #707070;
+}
+.footer_link li{
+  padding-top: 26px;
+}
+.footer_1 h2 img, .footer_2 h2 img{
+  height: 18px;
+}
+.footer_2{
+  padding-top: 86px;
+  padding-bottom: 76px;
+}
+.footer_toroku{
+  padding-top: 86px;
+  border-top: solid 1px rgba(51,51,51,0.12);
+}
+.footer_toroku h2{
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+.footer_toroku p{
+  padding-top: 26px;  
+}
+.footer_wrap_b{
+  padding: 16px 6%; 
+  height: 60px;
+  color: #fff;
+  background-color: #12B3C7;
+}
+.footer_container{
+  display: flex;
+  justify-content: space-between;  
+}
+.footer_wrap_b .logo_tis{
+  width: 100px;
+}
+/*---------------------------
+*下層ページ
+---------------------------*/
+/*規約類*/
+.terms_visual{
+  margin-top: 60px;
+  background: url("img/main_visual_sp.png") no-repeat center center;
+  background-size: cover;
+  background-position: bottom;
+  height: 230px;
+  /*文字を中央に*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.terms_visual_title{
+  width: 70vw;
+}
+.sec_terms_privacy h2{
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-top: 86px;
+  line-height: 1.44;
+  padding-bottom: 45px;
+  border-bottom: solid 1px rgba(51,51,51,0.12);  
+}
+.sec_terms_privacy div{
+  letter-spacing: 0.49em;
+}
+.sec_terms_privacy .preamble{
+  padding-top: 45px;
+}
+.terms_container{
+/*  font-weight: 300;*/
+  line-height: 2;
+  font-size: 0.625rem;
+}
+.terms_container h3{
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.terms_container .bracket_num{
+  padding-left: 6%; /*1.3rem*/
+  text-indent: -3%;/* -1.3rem*/
+}
+.terms_container .bracket_num li{
+  list-style-type:none;
+  list-style-position:inside;
+  counter-increment: cnt;
+  margin-bottom: 0;
+}
+.terms_container .bracket_num li:before{
+  display: marker;
+  content: "("counter(cnt)")";
+}
+.terms_container p, .terms_container li{
+  padding-bottom: 15px;
+}
+.terms_container .bracket_num .no_li_space{
+  text-indent: 0;
+}
+.sec_terms_privacy .no_padding p{
+  padding-bottom: 0;
+}
+.sec_terms_privacy .no_padding{
+  padding-bottom: 160px;
+}
+.sec_terms_privacy div .terms_engletter{
+  letter-spacing: 0.15em;
+  overflow-wrap: break-word;
+}
+/*404*/
+.error_404_wrap{
+  text-align: center;
+  margin: 244px auto 160px;
+}
+.error_404_404{
+  font-size: 3.75rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.error_404_notfound{
+  font-size: 1.125rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+.error_404_sorry{
+  font-size: 0.625rem;
+}
+
+
+/*---------------------------
+*レスポンシブ
+---------------------------*/
+@media screen and (min-width:768px){
+  .sp{
+    display: none;
+  }
+  .pc{
+    display: block;
+  }
+  .btn_1{
+    font-size: 1.125rem;
+    width: 220px;
+  }
+  .inner{
+    max-width: 1240px;
+    margin: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .home_h2_title{
+    padding-top: 165px;
+    margin-top: 0;
+    font-size: 1.875rem;
+  }
+  
+  
+/*---Header-----*/
+  .sub_header{
+    background-color: #f5f5f5;
+    height: 32px;
+    text-align: end;
+    font-size: 0.88rem;
+  }
+  .sub_header_contents{
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px 20px;    
+  }
+  .sub_header a:hover{
+    text-decoration-line: underline;
+    opacity: 0.7;
+  }
+  .main_header{
+    height: 106px;
+    background-color: #fff;
+  }
+  .main_header_wrap{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .header_logo img{
+    height: 54px;
+    margin-top: 26px;
+    margin-left: 0;
+  }
+  .header_nav_list{
+    display: flex;
+    position: static;
+    margin-bottom: 0;
+  }
+  .header_nav_list li a{
+    font-size: 1.13rem;
+    font-weight: 700;
+    padding-top: 30px;
+    padding-bottom: 13px;
+  }
+  .header_nav_list li:not(:last-of-type){
+    margin-right: 40px;
+  }  
+  .header_nav_list li a:hover{
+    position: relative;
+    display: inline-block;
+  }
+  .header_nav_list li a:hover:before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0px;/*線の上下位置*/
+    width: 100%;/*線の長さ*/
+    height: 4px;/*線の太さ*/
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);/*位置調整*/
+    background-color: #12b3c7;/*線の色*/
+    border-radius: 2px;/*線の丸み*/
+  }
+  .header_nav_list li a.current{
+    color: #027e9b;
+  }
+  
+ /*---Home 各Section-----*/ 
+  .main_visual{
+    margin: 138px 0 0;
+    height: 650px;
+    background: url("img/main_visual_pc.png") no-repeat;
+    background-position: 100px 0px;
+    background-size: cover;
+  }
+  .main_visual_title{
+    text-align: center;
+    max-width: 450px;
+    padding-left: 20px;
+  }
+  /*---Home 各Section-----*/  
+  .sec_service{
+    margin-top: 160px;
+    max-width: 880px;
+    display: flex;
+  }
+  .sec_service_wrap_1{
+    padding-top: 80px;
+  }
+  .sec_service_wrap_1 .ultra_logo{
+    margin: 0 80px 0;
+  }
+  .sec_service .caption{
+    margin-left: 80px;
+    margin-bottom: 42px;
+    font-size: 0.875rem;
+  }
+  .btn_1{
+    width: 316px;
+    height: 74px;
+    padding-top: 10px;
+    margin-left: 80px;
+    margin-bottom: 80px;
+  }
+  .sec_service_cardimg{
+    padding-top: 30px;
+  }
+  .sec_message{
+    margin-top: 160px;
+    padding-top: 0;
+    padding-bottom: 165px;
+  }
+  .sec_message_wrap{
+    max-width: 880px;
+    margin: 0 auto;
+  }
+  .sec_message_text{
+    font-size: 0.875rem;
+  }
+  .sec_company{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .sec_company_wrap{
+    max-width: 880px;
+    margin: auto;
+  }
+  .company_contents{
+    font-size: 1.125rem;
+    margin-bottom: 165px;
+  }
+  .company_contents th{
+    font-weight: 700;
+    padding-right: 0;
+    width: 220px;
+    padding-top: 28px;
+  }
+
+  .footer_wrap_a{
+    padding: 68px 20px 68px;
+    line-height: 1.0;
+  }
+  .footer_1,.footer_2,.footer_toroku{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .footer_2{
+    padding-top: 78px;
+    padding-bottom: 68px;
+  }  
+  .footer_wrap_b{
+    height: 66px;
+    padding: 16px 20px 0;
+  }
+  .footer_container{
+    max-width: 1200px;
+    margin: auto;
+  }
+  .footer_link{
+    display: flex;
+  }
+  .footer_link li{
+    padding-right: 2rem;
+    padding-top: 12px;
+  }
+  .footer_link a:hover{
+    opacity: 0.7;
+  }
+  .footer_toroku{
+    padding-top: 68px;
+  }
+  .footer_toroku p{
+    padding-top: 12px;  
+  }
+  .footer_1 h2 img, .footer_2 h2 img{
+    height: 16px;
+  }  
+  .footer_wrap_b .logo_tis{
+    width: unset;
+    height: 36px;
+  }
+  .footer_container small{
+    font-size: 1rem;
+  }
+  /*---------------------------
+  *下層ページ
+  ---------------------------*/
+  .terms_visual{
+    margin-top: 138px;
+    background: url("img/main_visual_pc.png") no-repeat center center;
+    height: 350px;
+  }
+  .terms_visual_title{
+    width: 38vw;
+  }
+  .sec_terms_privacy{
+    max-width: 920px;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: auto;
+  }
+  .sec_terms_privacy h2{
+    font-size: 1.875rem;
+    margin-top: 168px;
+    padding-bottom: 16px;
+  }
+  .sec_terms_privacy div{
+    letter-spacing: 0.1em;
+  }
+  .sec_terms_privacy .preamble{
+    padding-top: 40px;
+  }
+  .sec_terms_privacy a:hover{
+    opacity: 0.7;
+  }  
+  .terms_container{
+    line-height: 1.428;
+    font-size: 0.875rem;
+  }
+  .terms_container h3{
+    font-size: 1.125rem;
+  }
+  .terms_container .bracket_num{
+    padding-left: 3%; 
+    text-indent: -3%;
+  }
+  .terms_container p, .terms_container li{
+    padding-bottom: 28px;
+  }
+  .sec_terms_privacy .no_padding{
+    padding-bottom: 165px;
+  }  
+  
+  .error_404_wrap{
+    margin: 350px auto 156px;
+  }
+  .error_404_404{
+    font-size: 7.5rem;
+  }
+  .error_404_notfound{
+    font-size: 2.325rem;
+    margin-bottom: 50px;
+  }
+  .error_404_sorry{
+    font-size: 0.875rem;
+  }
+  
+}
+
+@media screen and (min-width:768px) and ( max-width:1024px) {
+
+  
+  
+  
+}
+
+
